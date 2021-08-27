@@ -1,10 +1,11 @@
 package by.kushnerevich.jdbc_example.model;
 
-public class Brand extends Entity{
+public class Brand extends Entity {
 
     private String name;
 
-    public Brand() { }
+    public Brand() {
+    }
 
     public Brand(String name) {
         this.name = name;
@@ -25,14 +26,20 @@ public class Brand extends Entity{
                 '}';
     }
 
-    public static class Builder{
-        private Brand brand;
+    public static class Builder {
+        private static Brand brand;
 
-        public Builder() { brand=new Brand(); }
+        public Builder() {
+            brand = new Brand();
+        }
 
-        public Builder setName(String name){
-            brand.name=name;
+        public Builder setName(String name) {
+            brand.name = name;
             return this;
+        }
+
+        public static Brand build() {
+            return brand;
         }
     }
 }

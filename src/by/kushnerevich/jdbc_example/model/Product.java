@@ -61,5 +61,9 @@ public class Product extends Entity {
             product.brandId = brandId;
             return this;
         }
+
+        public Product build(){
+            return product;
+        }
     }
 }

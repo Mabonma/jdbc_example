@@ -27,7 +27,7 @@ public class Brand extends Entity {
     }
 
     public static class Builder {
-        private static Brand brand;
+        private Brand brand;
 
         public Builder() {
             brand = new Brand();
@@ -38,7 +38,7 @@ public class Brand extends Entity {
             return this;
         }
 
-        public static Brand build() {
+        public Brand build() {
             return brand;
         }
     }
